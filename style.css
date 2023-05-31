@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+
+  overflow: hidden;
+
+}
+
+html,
+
+body {
+
+  margin: 0;
+
+  padding: 0;
+
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: #0d1019;
+
+  background: -moz-linear-gradient(-45deg, #0d1019 0%, #161b29 100%);
+
+  background: -webkit-linear-gradient(-45deg, #0d1019 0%, #161b29 100%);
+
+  background: linear-gradient(135deg, #0d1019 0%, #161b29 100%);
+
+}
+
+.container {
+
+  width: 60vw;
+
+  height: 60vw;
+
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  top: 0;
+
+  bottom: 0;
+
+  margin: auto;
+
+  overflow: hidden;
+
+}
+
+.bars-common {
+
+  height: 12vw;
+
+  max-height: 100%;
+
+  width: 3vw;
+
+  margin: auto;
+
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  top: 0;
+
+  bottom: 0;
+
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.8), inset 0 0 30px rgba(0, 255, 255, 0.8);
+
+}
+
+.bar-one {
+
+  left: 0;
+
+  right: 12vw;
+
+  top: 0;
+
+  bottom: 0;
+
+}
+
+.bar-two {
+
+  left: 0;
+
+  right: 0;
+
+  top: 0;
+
+  bottom: 0;
+
+}
+
+.bar-three {
+
+  left: 12vw;
+
+  right: 0;
+
+  top: 0;
+
+  bottom: 0;
+
+}
+
+.bar-one {
+
+  animation: barOne 1s .33s ease infinite;
+
+}
+
+@keyframes barOne {
+
+  0%,
+
+  100% {
+
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.8), inset 0 0 30px rgba(0, 255, 255, 0.8);
+
+  }
+
+  50% {
+
+    height: 6vw;
+
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.8), 0 0 60px rgba(255, 0, 255, 0.8), inset 0 0 30px rgba(255, 0, 255, 0.8);
+
+  }
+
+}
+
+.bar-two {
+
+  animation: barTwo 1s .66s ease infinite;
+
+}
+
+@keyframes barTwo {
+
+  0%,
+
+  100% {
+
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.8), inset 0 0 30px rgba(0, 255, 255, 0.8);
+
+  }
+
+  50% {
+
+    height: 6vw;
+
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.8), 0 0 60px rgba(255, 0, 255, 0.8), inset 0 0 30px rgba(255, 0, 255, 0.8);
+
+  }
+
+}
+
+.bar-three {
+
+  animation: barThree 1s .99s ease infinite;
+
+}
+
+@keyframes barThree {
+
+  0%,
+
+  100% {
+
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.8), inset 0 0 30px rgba(0, 255, 255, 0.8);
+
+  }
+
+  50% {
+
+    height: 6vw;
+
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.8), 0 0 60px rgba(255, 0, 255, 0.8), inset 0 0 30px rgba(255, 0, 255, 0.8);
+
+  }
+
+}
+
+@keyframes animate {
+
+  0%,
+
+  100% {
+
+    background: #00adff;
+
+  }
+
+  33.33% {
+
+    background: #ff0055;
+
+  }
+
+  66.66% {
+
+    background: #6600ff;
+
+  }
+
+}
+
+#content {
+
+  height: 100vh;
+
+  overflow: hidden;
+
+}
+
+h1 {
+
+  position: absolute;
+
+  height: 30%;
+
+  width: 100%;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  font-size: 3em;
+
+  font-weight: 200;
+
+  display: inline-block;
+
+  background: linear-gradient(90deg, #00adff, #ff0055, #6600ff);
+
+  background-size: 300% 300%;
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation: background 10s infinite;
+
+  background-size: 300% 300%;
+
+}
+
+.board {
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-gap: 5px;
+
+  width: 190px;
+
+  height: 190px;
+
+  margin: 0 auto;
+
+  background: linear-gradient(90deg, #00adff, #ff0055, #6600ff);
+
+  animation: animate 5s infinite;
+
+}
+
+.cell {
+
+  font-family: 'Varela Round', sans-serif;
+
+  width: 60px;
+
+  height: 60px;
+
+  background: linear-gradient(135deg, #0d1019 0%, #161b29 100%);
+
+  color: #fff;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 30px;
+
+  cursor: pointer;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+@keyframes background {
+
+  0%,
+
+  100% {
+
+    background-position: -200%;
+
+    text-shadow: 0 0 10px #00adff, 0 0 20px #ff0055, 0 0 30px #6600ff;
+
+  }
+
+  50% {
+
+    background-position: 200%;
+
+    text-shadow: 0 0 10px #6600ff, 0 0 20px #ff0055, 0 0 30px #00adff;
+
+  }
+
+}
